@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styleCSS.css">
+    <title>Présentation CSS</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="header">
+            <div><img src="logo.png" alt="logo"></div>
+            <div>
+                <p><a href="">L'ADRAR</a></p>
+            </div>
+            <div>
+                <p><a href="">Présentation du HTML</a></p>
+            </div>
+            <div>
+                <p><a href="">Présentation du CSS</a></p>
+            </div>
+            <div>
+                <p><a href="">Contact</a></p>
+            </div>
+    </header>
+
+    <h1>Présentation de CSS</h1>
+    <p>
+        Les CSS (Cascading Style Sheets, feuilles de styles en cascade) vont simplifier la création de vos pages, au
+        prix d'un petit apprentissage initial. Il s'agit d'un fichier que l'on inclut dans chaque page web et qui
+        contient les attributs de position et de style pour le contenu.<br />
+        Le format CSS existe de depuis 1994 mais s'est généralisé en 2000 avec un support complet dans Internet Explorer
+        5.<br />
+        Il est possible d'associer une feuille de style à un document XML. Dans ce cas les propriétés sont attribuées
+        aux éléments (balises) du document.
+    </p>
+    <nav>
+        <div id="navflex">
+            <div>
+                <ul>
+                    <li><a href="#pourquoiCSS">Pourquoi les feuilles de style ?</a></li>
+                    <li><a href="#bases">Les bases</a></li>
+                    <li><a href="#property">Eléments et propriétés</a></li>
+                    <li><a href="#declaration">Les déclarations CSS</a></li>
+                    <li><a href="#inserer">Insérer une feuille de style</a></li>
+                    <li><a href="#position">Le positionnement</a></li>
+                    <li><a href="#regle">Une règle : propriétés en cascade</a></li>
+                </ul>
+            </div>
+            <div>
+                <img src="CSS3Logo.png" alt="css logo">
+            </div>
+        </div>
+    </nav>
+    <h3 id="pourquoiCSS">Pourquoi les feuilles de style ?</h3>
+    <p>
+        L'intérêt le plus commun est la création de plusieurs colonnes de texte, selon la présentation des
+        journaux.<br />
+        Les CSS ont les avantages suivants:
+    </p>
+    <ul>
+        <li>Définir un type de présentation une seule fois, que l'on réutilise dans toutes les pages.</li>
+        <li>Séparer texte et présentation ce qui a plusieurs avantages:
+            <ol>
+                <li>Faciliter la lecture de la page par les robots des moteurs de recherche qui ignorent la
+                    présentation.</li>
+                <li>Changer le style du site tout entier en modifant seulement la feuille de style.</li>
+                <li>Si besoin changer la style d'affichage pour une même page, avec un affichage épuré pour imprimer
+                    le
+                    texte par exemple.</li>
+            </ol>
+        </li>
+    </ul>
+    <h3 id="bases">Les bases</h3>
+    <p>
+        Les feuilles de styles servent principalement:
+    </p>
+    <ul>
+        <li>A positionner les parties de la page. Le plus souvent, un cadre d'en-tête, un menu à gauche ou à
+            droite, le
+            cadre principal du contenu de la page et éventuellement un pied de page.</li>
+        <li>A définir les polices et tailles des titres et sous-titres.</li>
+        <li>A désigner et à positionner les images.</li>
+        <li>On définit aussi les marges externes et externes des cadres de texte.</li>
+    </ul>
+    <p>
+        Noter que l'on ne peut pas mettre de textes dans le fichier de feuille de style, mais il vaut mieux de
+        toute
+        façon qu'ils soient dans la page pour être pris en compte par les moteurs de recherche.
+    </p>
+    <h3 id="property">Eléments et propriétés</h3>
+
+    <div class="float">
+        <img src="css-syntax.gif" alt="syntax">
+    </div>
+    <div id="flexProperty">
+        <div>
+            <p>
+                Les CSS se réduisent à deux choses: les éléments, et leurs propriétés. Les éléments sont les balises
+                Html ou une classe définie dans la feuille de style.
+            </p>
+        </div>
+        <div>
+            <p>
+                Pour fractionner et positionner les parties de la page, on utilise une balise nommée "div".
+            </p>
+        </div>
+        <div>
+            <p>
+                Le format général de déclaration de style est le suivant:
+            </p>
+        </div>
+        <div>
+            <pre>
+nom {
+    ...liste de propriétés...
+} 
+        </pre>
+        </div>
+        <div>
+            <p>
+                Le nom peut avoir trois formes, comme détaillé ci-dessous.<br />
+                Les propriétés ont la forme:
+            </p>
+        </div>
+        <div>
+            <pre>
+        attribut : valeur ;
+    </pre>
+        </div>
+        <div>
+            <p>
+                Certains attributs comme "border" par exemple, peuvent comporter une liste de valeurs séparées par un
+                espace
+                (non pas par une virgule).
+            </p>
+        </div>
+    </div>
+    <h3 id="declaration">Les déclarations CSS</h3>
+    <p>
+        Il y a trois types de déclarations dans un fichier CSS:
+    </p>
+    <ul>
+        <li>Les balises HTML dont le style est redéfini. Exemple:<br />
+            table{}</li>
+        <li>Les éléments avec identificateur unique:<br />
+            #menu{}</li>
+        <li>Les classes réutilisables:<br />
+            .item{}</li>
+    </ul>
+    <p>
+        Les identificateurs et classes nécessitent un attribut dans le code HTML. Cela aura la forme suivante, avec la
+        balise div par exemple:
+    </p>
+    <ul>
+        <li>&ltdiv id="menu"&gt<br />
+            Pour un identificateur unique dans la page (on peut le réutiliser dans des pages différentes).</li>
+        <li>&ltdiv class="item"&gt<br />
+            Pour un nom réutilisé plusieurs fois dans une même page.</li>
+    </ul>
+    <h3 id="inserer">Insérer une feuille de style</h3>
+    <p>
+        On place dans la section &lthead&gt la ligne suivante:
+    </p>
+    <p>
+        <strong>&ltlink type="text/css" href="mafeuille.css" rel="stylesheet"&gt</strong>
+    </p>
+    <p>
+        - le type désigne le type d'affichage.<br />
+        - href a pour valeur le fichier contenant les définitions de style.<br />
+        - rel="stylesheet" précise le type de lien.<br />
+    </p>
+    <h3 id="position">Le positionnement</h3>
+    <div class="float">
+        <img src="margin.png" alt="margin">
+    </div>
+    <div id="flexPosition">
+        <p>
+            Les parties de la page sont découpées avec une balise div à laquelle on associe un identificateur. Exemples:
+        </p>
+        <pre>
+&ltdiv id="logo"&gt &lt/div&gt
+&ltdiv id="menu"> &lt/div>
+&ltdiv id="contenu"> &lt/div>
+    </pre>
+        <p>
+            Ces éléments sont repris dans la feuille de style avec le format suivant:
+        </p>
+        <pre>
+#logo  { }         
+#menu
+{  
+    top: 60px; 
+}
+#contenu
+{ 
+    left: 120px;
+}
+    </pre>
+        <p>
+            Il suffit ensuite de définir les attributs de positions.<br />
+            Le menu aura l'attribut: top: 60px; pour être placé 60 pixels sous la partie logo.<br />
+            Le contenu aura l'attribut: left: 120px; pour ménager 120 pixel à gauche pour le menu.<br />
+        </p>
+    </div>
+    <h3 id="regle">Une règle: propriétés en cascades</h3>
+    <p>
+        Ne perdez pas de vue que les CSS sont hiérarchiques: toutes les propriétés que vous définissez sont relatives à
+        l'élément dans lequel vous vous trouvez. Par exemple, une police réduite à 80% à l'intérieur d'un élement dans
+        lequel la police est augmentée à 120 % revient à une police de taille standard.
+    </p>
+    <p>
+        D'ailleurs, il est possible de cibler précisément un élément à l'intérieur d'un autre élement avec la syntaxe
+        suivante:
+    </p>
+    <pre>
+#selecteur selecteurinterne
+{
+    ...attributs...
+}
+        
+Exemple:
+        
+#table a
+{
+    color:green;
+}
+    <p>
+        Les liens seront verts, mais dans les tableaux seulement. Pour avoir le détails des propriétés CSS, consultez les références ci-dessous.
+    </p>
+    </pre>
+    <footer>
+        <div id="footer">
+            <div>
+                <p><a href="">Contact</a></p>
+            </div>
+            <div>
+                <p><a href="">Mentions légales</a></p>
+            </div>
+            <div>
+                <p><a href="">Se rendre à l'ADRAR</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
